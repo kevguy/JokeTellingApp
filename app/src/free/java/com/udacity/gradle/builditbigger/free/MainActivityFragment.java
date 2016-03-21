@@ -37,11 +37,11 @@ public class MainActivityFragment extends Fragment {
         // Set onClickListener for the button
         Button button = (Button) root.findViewById(R.id.joke_btn);
         button.setOnClickListener(new View.OnClickListener(){
-           @Override
-           public void onClick(View v) {
-               progressBar.setVisibility(View.VISIBLE);
-               getJoke();
-           }
+            @Override
+            public void onClick(View v) {
+                progressBar.setVisibility(View.VISIBLE);
+                getJoke();
+            }
         });
 
         progressBar = (ProgressBar) root.findViewById(R.id.joke_progressbar);
