@@ -24,15 +24,28 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    productFlavors {
+        free {
+            applicationId "com.udacity.gradle.builditbigger.free"
+            versionName "1.0-free"
+        }
+
+        paid {
+            applicationId "com.udacity.gradle.builditbigger.paid"
+            versionName "1.0-paid"
+        }
+    }
 }
+
+
+
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     // Added for AdMob
     compile project(":javajoker")
     compile project(":jokefactory")
-    compile 'com.android.support:appcompat-v7:23.2.0'
-    compile 'com.google.android.gms:play-services:8.4.0'
     compile project(path: ':backend', configuration: 'android-endpoints')
 
     androidTestCompile 'junit:junit:4.12'
@@ -41,4 +54,7 @@ dependencies {
     androidTestCompile 'com.android.support:support-annotations:23.2.0'
     androidTestCompile 'org.hamcrest:hamcrest-core:1.3'
 
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.android.support:support-v4:23.2.0'
 }
