@@ -24,7 +24,7 @@ public class DisplayJokeActivity extends AppCompatActivity {
         if (JokeResult != null) {
             textview.setText(JokeResult);
         } else {
-            textview.setText("Dig deeped, we gotta find the joke!");
+            textview.setText("Dig deeper, we gotta find the joke!");
         }
 
 
