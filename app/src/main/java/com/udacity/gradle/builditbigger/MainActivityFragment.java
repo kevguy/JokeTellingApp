@@ -25,6 +25,7 @@ public class MainActivityFragment extends Fragment {
 
     ProgressBar progressBar = null;
     public String loadedJoke = null;
+    public boolean testFlag = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -63,12 +64,14 @@ public class MainActivityFragment extends Fragment {
     }
 
     public void launchDisplayJokeActivity(){
-        Context context = getActivity();
-        Intent intent = new Intent(context, DisplayJokeActivity.class);
-        intent.putExtra(context.getString(R.string.jokeEnvelope), loadedJoke);
-        //Toast.makeText(context, loadedJoke, Toast.LENGTH_LONG).show();
-        context.startActivity(intent);
-        progressBar.setVisibility(View.GONE);
+        if (!testFlag) {
+            Context context = getActivity();
+            Intent intent = new Intent(context, DisplayJokeActivity.class);
+            intent.putExtra(context.getString(R.string.jokeEnvelope), loadedJoke);
+            //Toast.makeText(context, loadedJoke, Toast.LENGTH_LONG).show();
+            context.startActivity(intent);
+            progressBar.setVisibility(View.GONE);
+        }
     }
 
 }
