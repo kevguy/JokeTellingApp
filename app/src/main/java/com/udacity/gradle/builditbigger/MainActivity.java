@@ -46,7 +46,7 @@ public class MainActivity extends ActionBarActivity {
         intent.putExtra(getString(R.string.jokeEnvelope), joker.tellJoke());
         startActivity(intent);*/
 
-        new EndpointAsyncTask().execute(this);
+        //new EndpointAsyncTask().execute(this);
 
     }
 
